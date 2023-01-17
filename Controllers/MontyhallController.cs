@@ -16,7 +16,7 @@ namespace MontyhallBackend.Controllers
             int wins = 0;
             int losses = 0;
 
-            // iterate our MontyHall routine
+          
             for (int i = 0; i < montyhall.SimulationCount; i++)
             {
 
@@ -39,8 +39,7 @@ namespace MontyhallBackend.Controllers
         {
             bool win = false;
 
-            // randomly remove one of the *goat* doors,
-            // but not the "contestants picked" ONE!
+            
             int leftGoat = 0;
             int rightGoat = 2;
             switch (pickedDoor)
@@ -52,15 +51,15 @@ namespace MontyhallBackend.Controllers
 
             int keepGoat = goatDoorToRemove == 0 ? rightGoat : leftGoat;
 
-            // would the contestant win with the switch or the stay?
+           
             if (changeDoor == 0)
             {
-                // not changing the initially picked door
+                
                 win = carDoor == pickedDoor;
             }
             else
             {
-                // changing picked door to the other door remaining
+                
                 win = carDoor != keepGoat;
             }
 
