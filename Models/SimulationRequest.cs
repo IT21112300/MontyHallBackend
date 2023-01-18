@@ -1,6 +1,6 @@
 ﻿namespace MontyhallBackend.Models
 {
-    public class Montyhall
+    public class SimulationRequest
     {
         public int SimulationCount { get; set; }
         public int SwitchDoor { get; set; }

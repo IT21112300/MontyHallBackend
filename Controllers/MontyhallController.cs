@@ -10,17 +10,17 @@ namespace MontyhallBackend.Controllers
     {
 
         [HttpPost("Simulate")]
-        public IActionResult Simulate(Montyhall montyhall)
+        public IActionResult Simulate(SimulationRequest request)
         {
             Random random = new Random();
             int wins = 0;
             int losses = 0;
 
           
-            for (int i = 0; i < montyhall.SimulationCount; i++)
+            for (int i = 0; i < request.SimulationCount; i++)
             {
 
-                bool result = MontyHallPick(random.Next(3), montyhall.SwitchDoor, random.Next(3), random.Next(1));
+                bool result = MontyHallPick(random.Next(3), request.SwitchDoor, random.Next(3), random.Next(1));
 
                 if (result)
                 {
